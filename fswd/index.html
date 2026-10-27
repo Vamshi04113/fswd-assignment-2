@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jadhav Ramesh | Educator & Achiever</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #081526;
+    --blue: #173653;
+    --gold: #e9bd68;
+    --light: #f5f7fb;
+    --text: #263449;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 18px 8%;
+    background: rgba(8, 21, 38, 0.97);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 20px #0002;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 90px 10%;
+    background:
+        radial-gradient(circle at 85% 35%, #31577a 0, transparent 35%),
+        linear-gradient(120deg, #081526, #173653);
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1s ease;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.15;
+    margin: 22px 0 12px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: clamp(19px, 3vw, 27px);
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 650px;
+    color: #d6e0ec;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px #0004;
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    margin-left: 10px;
+}
+
+section.content {
+    padding: 85px 10%;
+}
+
+.section-label {
+    text-align: center;
+    color: #a67b2f;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(27px, 4vw, 39px);
+    color: var(--navy);
+    margin: 8px 0 18px;
+}
+
+.section-intro {
+    max-width: 760px;
+    text-align: center;
+    margin: 0 auto 40px;
+    color: #637087;
+}
+
+.about-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-visual {
+    min-height: 300px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 15px;
+    color: var(--gold);
+    background: linear-gradient(145deg, #102440, #274a6c);
+    padding: 30px;
+}
+
+.about-visual .symbol {
+    font-size: 85px;
+}
+
+.about-visual h3 {
+    font-size: 25px;
+    color: white;
+}
+
+.about-text h3 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #5e6a7d;
+}
+
+.details {
+    margin-top: 20px;
+    display: grid;
+    gap: 12px;
+}
+
+.detail {
+    padding: 13px 15px;
+    border-left: 3px solid var(--gold);
+    background: white;
+    border-radius: 4px;
+}
+
+.detail strong {
+    color: var(--navy);
+}
+
+.career {
+    background: #eaf0f7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 24px;
+    box-shadow: 0 8px 25px #1024400b;
+    border-bottom: 3px solid transparent;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-bottom-color: var(--gold);
+    box-shadow: 0 14px 30px #10244015;
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #657187;
+    font-size: 15px;
+}
+
+.award-section {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.award-section .section-title {
+    color: white;
+}
+
+.award-section .section-intro {
+    color: #c3d0e0;
+}
+
+.award-card {
+    max-width: 760px;
+    margin: auto;
+    padding: 45px 30px;
+    border: 1px solid #b99148;
+    border-radius: 16px;
+    background: linear-gradient(140deg, #142a45, #0c1b30);
+    box-shadow: 0 15px 45px #0002;
+}
+
+.trophy {
+    font-size: 68px;
+}
+
+.award-card .year {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin: 12px 0;
+}
+
+.award-card h3 {
+    font-size: clamp(23px, 4vw, 34px);
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.award-card p {
+    color: #d4deeb;
+    max-width: 580px;
+    margin: auto;
+}
+
+.quote {
+    text-align: center;
+    padding: 75px 10%;
+    background: white;
+}
+
+.quote blockquote {
+    max-width: 850px;
+    margin: auto;
+    font-size: clamp(21px, 4vw, 32px);
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+}
+
+.quote p {
+    color: #a67b2f;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-panel {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #1024400b;
+}
+
+.contact-panel p {
+    margin: 8px 0;
+}
+
+footer {
+    background: #050d18;
+    color: #d2dbea;
+    padding: 28px 8%;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+#topButton {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 21px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 15px #0003;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s, transform .7s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .about-box {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section.content {
+        padding: 60px 7%;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 7%;
+    }
+
+    .button-outline {
+        margin: 12px 0 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Jadhav Ramesh</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#career">Career</a>
+        <a href="#achievements">Awards</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="eyebrow">EDUCATION · DEDICATION · EXCELLENCE</div>
+        <h1>Jadhav <span>Ramesh</span></h1>
+        <h2>Dedicated Bio-Science Teacher</h2>
+        <p>A passionate educator inspiring students through knowledge, discipline and dedication. Celebrating a journey devoted to education and the future of young minds.</p>
+        <a href="#about" class="button">Explore His Journey</a>
+        <a href="#achievements" class="button button-outline">View Achievement</a>
+    </div>
+</section>
+
+<section class="content reveal" id="about">
+    <div class="section-label">HIS STORY</div>
+    <h2 class="section-title">About Him</h2>
+    <p class="section-intro">A teacher's impact goes beyond the classroom. It lives on in the knowledge, confidence and values shared with every student.</p>
+    <div class="about-box">
+        <div class="about-visual">
+            <div>
+                <div class="symbol">🎓</div>
+                <h3>A Life Dedicated to Education</h3>
+                <p>Teaching with purpose, inspiring with passion.</p>
+            </div>
+        </div>
+        <div class="about-text">
+            <h3>Meet Jadhav Ramesh Sir</h3>
+            <p>Jadhav Ramesh is a Bio-Science teacher serving at a government school in Telangana. His profession represents the important role educators play in shaping the next generation.</p>
+            <p>This website honours his professional journey and celebrates his recognition as a recipient of the Telangana Best State Teacher Award 2026.</p>
+            <div class="details">
+                <div class="detail"><strong>Profession:</strong> Bio-Science Teacher</div>
+                <div class="detail"><strong>Institution:</strong> Government AHS (B), Jharipunaguda</div>
+                <div class="detail"><strong>Mandal:</strong> Talamadugu</div>
+                <div class="detail"><strong>District:</strong> Adilabad, Telangana</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content career reveal" id="career">
+    <div class="section-label">PROFESSIONAL PROFILE</div>
+    <h2 class="section-title">Career & Values</h2>
+    <p class="section-intro">The values that make education meaningful and a teacher's contribution lasting.</p>
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon">🔬</div>
+            <h3>Bio-Science Education</h3>
+            <p>Encouraging scientific curiosity, understanding of life and learning through science.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">📚</div>
+            <h3>Knowledge & Guidance</h3>
+            <p>Supporting students as they develop knowledge, confidence and a lifelong love of learning.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🌟</div>
+            <h3>Dedication to Service</h3>
+            <p>Recognising the importance of teaching and the contribution educators make to society.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content award-section reveal" id="achievements">
+    <div class="section-label">A MOMENT OF PRIDE</div>
+    <h2 class="section-title">Achievement & Recognition</h2>
+    <p class="section-intro">Celebrating a proud milestone in his professional journey.</p>
+    <div class="award-card">
+        <div class="trophy">🏆</div>
+        <div class="year">2026 · TELANGANA</div>
+        <h3>Best State Teacher Award</h3>
+        <p>A proud recognition celebrating Jadhav Ramesh Sir and his contribution to the teaching profession.</p>
+    </div>
+</section>
+
+<section class="quote reveal">
+    <blockquote>“The influence of a good teacher can never be erased. Education creates knowledge, character and a better tomorrow.”</blockquote>
+    <p>— A Tribute to Jadhav Ramesh Sir</p>
+</section>
+
+<section class="content contact reveal" id="contact">
+    <div class="section-label">PROFILE DETAILS</div>
+    <h2 class="section-title">Professional Information</h2>
+    <div class="contact-panel">
+        <p><strong>Name:</strong> Jadhav Ramesh</p>
+        <p><strong>Designation:</strong> Bio-Science Teacher</p>
+        <p><strong>School:</strong> Government AHS (B), Jharipunaguda</p>
+        <p><strong>Location:</strong> Talamadugu, Adilabad, Telangana</p>
+        <p><strong>Recognition:</strong> Telangana Best State Teacher Award 2026</p>
+    </div>
+</section>
+
+<footer>
+    <p>Designed with ❤️ and respect for <strong>Jadhav Ramesh Sir</strong></p>
+    <p>© <span id="year"></span> | Personal Profile Website</p>
+</footer>
+
+<button id="topButton" aria-label="Back to top">↑</button>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(section => {
+    revealObserver.observe(section);
+});
+
+const topButton = document.getElementById("topButton");
+
+window.addEventListener("scroll", () => {
+    topButton.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+topButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+</body>
+</html>
